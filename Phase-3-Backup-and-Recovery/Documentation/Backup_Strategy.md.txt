@@ -1,0 +1,22 @@
+# Shakorly Smart Tech - Official Backup Strategy
+
+**Document Owner:** DBA Team
+**Last Updated:** July 29, 2025
+
+---
+
+### 1. Strategy for Critical Production Databases
+
+This strategy applies to all databases classified as "critical" to the business.
+
+*   **Recovery Model:** Must be set to `FULL`.
+*   **Backup Location:** All backups will be written to a dedicated backup drive/folder. For our server, this will be `C:\SQLBackups\`.
+*   **Backup Schedule:**
+    *   **Full Backups:** Once per week, on Sunday at 2:00 AM.
+    *   **Differential Backups:** Once per day, Monday through Saturday at 2:00 AM.
+    *   **Transaction Log Backups:** Every hour, on the hour, from 7:00 AM to 7:00 PM. 
+
+### 2. Retention Policy
+
+*   Backup files will be kept for 14 days and then automatically deleted. 
+

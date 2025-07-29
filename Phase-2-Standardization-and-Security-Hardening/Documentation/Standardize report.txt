@@ -1,0 +1,39 @@
+# Innovatech Solutions - Official Database Standards
+
+**Document Owner:** DBA Team
+**Last Updated:** July 26, 2025
+
+---
+
+### 1. Purpose
+
+This document outlines the mandatory standards for the installation, configuration, and management of all database servers at Innovatech Solutions. The goal is to ensure security, stability, and consistency across the environment.
+
+---
+
+### 2. Configuration Standards
+
+All SQL Server instances must adhere to the following configuration settings upon setup.
+
+*   **Memory:** `max server memory (MB)` **MUST** be configured to a specific value. It must not be left at the default. The value should be calculated to leave sufficient memory for the operating system (typically 10-20% of total system RAM).
+*   **Default Trace:** The default trace must remain enabled for auditing purposes.
+
+---
+
+### 3. Security Policy
+
+*   **`sa` Login:** The built-in `sa` login **MUST** be disabled on all production and staging servers.
+*   **Authentication:** Windows Authentication (Integrated Security) is the preferred method for all user and administrator access. SQL Logins should only be used when absolutely necessary for specific application requirements and must be approved by the DBA team.
+*   **Principle of Least Privilege:** All user accounts (for humans or applications) must be granted only the minimum permissions necessary to perform their required function. No application accounts should be granted `sysadmin` rights.
+
+---
+
+### 4. Backup Policy
+
+*   *(This section will be completed in Phase 3)*
+
+---
+
+### 5. Maintenance Policy
+
+*   All production databases **MUST** have a standard maintenance plan that performs, at a minimum, weekly index maintenance and statistics updates.

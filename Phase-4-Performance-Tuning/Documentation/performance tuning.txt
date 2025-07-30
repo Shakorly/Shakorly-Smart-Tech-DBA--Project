@@ -1,0 +1,14 @@
+# Performance Tuning Log
+
+**Date:** July 26, 2025
+**Database:** Shakorly Smart Tech
+**Analyst:** Taiwo
+
+---
+
+### Issue 1: Slow Query on dbo.Employees by EmployeeName
+
+*   **Problem:** A query searching for a user by `EmployeeName` was performing a full Clustered Index Scan, which is inefficient and will not scale.
+*   **Evidence:** The execution plan showed a "Missing Index" recommendation with a high-impact score.
+*   **Solution:** Created the recommended non-clustered index on the `EmployeeName` column.
+*   **Result:** The new execution plan confirms the query now uses an "Index Seek". Query cost was reduced by over 99%. The issue is resolved.

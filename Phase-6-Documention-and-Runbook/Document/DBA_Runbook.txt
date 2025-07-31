@@ -1,7 +1,7 @@
-#Shakorly Smart Tech Solutions - DBA Runbook
+# Shakorly Smart Tech Solutions - DBA Runbook
 
 **Owner:** Database Administration Team
-**Last Updated:** [Enter Today's Date Here]
+**Last Updated:** 7-31-2025
 
 ---
 

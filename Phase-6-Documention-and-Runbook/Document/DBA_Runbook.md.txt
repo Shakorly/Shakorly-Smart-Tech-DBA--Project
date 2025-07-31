@@ -1,0 +1,78 @@
+#Shakorly Smart Tech Solutions - DBA Runbook
+
+**Owner:** Database Administration Team
+**Last Updated:** [Enter Today's Date Here]
+
+---
+
+## 1. Introduction
+This Runbook is the central operations manual for the Shakorly Smart Tech Solutions database environment. It contains links to all standard operating procedures (SOPs), scripts, policies, and emergency contacts. When responding to an incident or planning a change, this is the first document to consult.
+
+---
+
+## 2. Environment Overview
+*   **Master Server Inventory:** This document contains the list of all known database servers, their versions, and owners.
+    *   [Link to Database_Inventory.csv](../../Phase-1-Assessment/documentation/Database_Inventory.csv)
+
+---
+
+## 3. Phase 1: Assessment Procedures
+This section contains the scripts used for initial environment discovery and assessment.
+
+*   **Instance Configuration Check:** Script to gather CPU, memory, and instance-level settings.
+    *   [Link to Get-InstanceConfiguration.sql](../../Phase-1-Assessment/scripts/2_Get-InstanceConfiguration.sql)
+*   **Backup Status Check:** Script to check the last backup date for all databases. **(CRITICAL FIRST CHECK)**
+    *   [Link to Get-BackupStatus.sql](../../Phase-1-Assessment/scripts/4_Get-BackupStatus.sql)
+*   **Security Principals Check:** Script to list all server logins and identify sysadmins.
+    *   [Link to Get-SecurityPrincipals.sql](../../Phase-1-Assessment/scripts/5_Get-SecurityPrincipals.sql)
+
+---
+
+## 4. Phase 2: Standardization and Security
+This section outlines the core policies and scripts for server hardening and consistent configuration.
+
+*   **Official DBA Standards Document:** The "constitution" for our database environment.
+    *   [Link to DBA_Standards.md](../../Phase-2-Standardization/documentation/DBA_Standards.md)
+*   **Script to Set Max Server Memory:** Standard procedure for configuring memory.
+    *   [Link to 1_Set-MaxServerMemory.sql](../../Phase-2-Standardization/scripts/1_Set-MaxServerMemory.sql)
+*   **Script to Disable `sa` Account:** Standard procedure for security hardening.
+    *   [Link to 2_Disable-SA-Account.sql](../../Phase-2-Standardization/scripts/2_Disable-SA-Account.sql)
+
+---
+
+## 5. Phase 3: Backup and Recovery
+This section contains our data protection strategy and emergency recovery procedures.
+
+*   **Official Backup Strategy:** Defines backup types, frequency, and retention.
+    *   [Link to Backup_Strategy.md](../../Phase-3-Backup-and-Recovery/documentation/Backup_Strategy.md)
+*   **Emergency Recovery Script:** The script to use to restore a database from backups after a disaster.
+    *   [Link to 4_EXECUTE_RECOVERY.sql](../../Phase-3-Backup-and-Recovery/scripts/4_EXECUTE_RECOVERY.sql)
+*   **SQL Agent Jobs:** The backup system is automated via jobs configured on the server. See the Backup Strategy document for job names and schedules.
+
+---
+
+## 6. Phase 4: Performance Tuning
+This section contains logs and scripts related to performance optimization.
+
+*   **Performance Tuning Log:** A running log of performance issues and their resolutions.
+    *   [Link to Performance_Tuning_Log.md](../../Phase-4-Performance-Tuning/documentation/Performance_Tuning_Log.md)
+*   **Example Fixing Index Script:** An example script for creating an index to solve a performance problem.
+    *   [Link to 4_Create-Fixing-Index.sql](../../Phase-4-Performance-Tuning/scripts/4_Create-Fixing-Index.sql)
+
+---
+
+## 7. Phase 5: Automation
+This section contains the scripts for our automated monitoring and alerting system.
+
+*   **Daily Health Check Script:** The full T-SQL script for the automated daily report.
+    *   [Link to 4_Daily-Health-Check.sql](../../Phase-5-Automation/scripts/4_Daily-Health-Check.sql)
+*   **Test Alert Script:** A script to generate a Severity 16 error to test the alerting system.
+    *   [Link to 3_Test-Severity-16-Alert.sql](../../Phase-5-Automation/scripts/3_Test-Severity-16-Alert.sql)
+
+---
+
+## 8. Phase 6: Documentation and Change Management
+*   **Schema Documentation Script:** A script to generate a basic data dictionary for any database.
+    *   [Link to Generate_Schema_Doc.sql](../scripts/Generate_Schema_Doc.sql)
+*   **Official Change Management Process:** The workflow that must be followed for all production database changes.
+    *   [Link to CHANGE_MANAGEMENT.md](./CHANGE_MANAGEMENT.md)

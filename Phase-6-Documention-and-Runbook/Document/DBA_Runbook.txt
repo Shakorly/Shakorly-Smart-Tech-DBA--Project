@@ -12,7 +12,7 @@ This Runbook is the central operations manual for the Shakorly Smart Tech Soluti
 
 ## 2. Environment Overview
 *   **Master Server Inventory:** This document contains the list of all known database servers, their versions, and owners.
-    *   [Link to Database_Inventory.csv](../../Phase-1-Assessment/documentation/Database_Inventory.csv)
+     [Link to Database_Inventory.csv](./Phase-1-Assessment/documentation/Database_Inventory.csv)
 
 ---
 
@@ -20,7 +20,7 @@ This Runbook is the central operations manual for the Shakorly Smart Tech Soluti
 This section contains the scripts used for initial environment discovery and assessment.
 
 *   **Instance Configuration Check:** Script to gather CPU, memory, and instance-level settings.
-    *   [Link to Get-InstanceConfiguration.sql](../../Phase-1-Assessment/scripts/2_Get-InstanceConfiguration.sql)
+    *   [Link to Get-InstanceConfiguration.sql](./Phase-1-Assessment/scripts/2_Get-InstanceConfiguration.sql)
 *   **Backup Status Check:** Script to check the last backup date for all databases. **(CRITICAL FIRST CHECK)**
     *   [Link to Get-BackupStatus.sql](../../Phase-1-Assessment/scripts/4_Get-BackupStatus.sql)
 *   **Security Principals Check:** Script to list all server logins and identify sysadmins.

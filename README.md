@@ -23,6 +23,6 @@ The project is divided into six distinct phases, each in its own folder:
 
 The best place to start is the master operations manual for the entire project:
 
-### **[The DBA Runbook](./Phase-6-Documentation-and-Runbook/documentation/DBA_Runbook)**
+### **[The DBA Runbook](./Phase-6-Documentation-and-Runbook/documentation/DBA_Runbook.txt)**
 
 The Runbook contains links to all the scripts, policies, and documentation created throughout this project.

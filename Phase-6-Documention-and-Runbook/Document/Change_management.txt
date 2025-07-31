@@ -1,0 +1,10 @@
+# Database Change Management Process
+
+All changes to production database schemas or server configurations must follow this process.
+
+1.  **Request:** The developer or user submits a change request detailing what needs to change and why.
+2.  **Review:** The DBA reviews the request and the proposed script for performance, security, and adherence to standards.
+3.  **Approval:** The DBA and the requesting party's manager approve the change.
+4.  **Scheduling:** The change is scheduled for an approved maintenance window to minimize user impact.
+5.  **Deployment:** The DBA deploys the change to the production environment.
+6.  **Verification:** The DBA and the requester verify that the change was successful and did not cause any unintended side effects.

@@ -1,0 +1,4 @@
+﻿Employees,EmployeeID,int,4,0
+Employees,EmployeeName,nvarchar,200,1
+Employees,Department,nvarchar,100,1
+Employees,HireDate,date,3,1
